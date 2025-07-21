@@ -29,13 +29,12 @@
                     <a href="scholarship_search_results.html" class="text-text-secondary hover:text-primary transition-smooth">Scholarships</a>
                     <a href="college_partnership_hub.html" class="text-text-secondary hover:text-primary transition-smooth">Colleges</a>
                     <div class="relative" x-data="{ open: false }">
-                        <button @click="open = !open" class="btn-primary">Login</button>
+                        <button @click="open = !open" class="btn-primary">Login/Register</button>
                         <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
-                            <a href="student_login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Student Login</a>
-                            <a href="college_login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">College Login</a>
+                            <a href="student_login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Student</a>
+                            <a href="college_login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">College</a>
                         </div>
                     </div>
-                    <a href="student_dashboard.html" class="btn-primary">Dashboard</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -70,13 +69,14 @@
                         <!-- Search Bar -->
                         <div class="relative mb-6">
                             <div class="flex items-center bg-surface rounded-xl border-2 border-secondary-200 focus-within:border-primary transition-smooth">
-                                <svg class="h-6 w-6 text-text-secondary ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                                </svg>
-                                <input type="text" x-model="search" @keydown.enter="showPopup = true; setTimeout(() => { window.location.href = 'scholarship_search_results.html' }, 3000)" placeholder="Search scholarships by course, college, or eligibility..." class="flex-1 px-4 py-4 bg-transparent text-lg focus:outline-none" />
+                                <select class="flex-1 px-4 py-4 bg-transparent text-lg focus:outline-none">
+                                    <option>Class 10</option>
+                                    <option>Class 12</option>
+                                </select>
+                                <input type="text" placeholder="Enter Percentage" class="flex-1 px-4 py-4 bg-transparent text-lg focus:outline-none" />
                                 <button @click="showPopup = true; setTimeout(() => { window.location.href = 'scholarship_search_results.html' }, 3000)" class="bg-primary text-white px-6 py-4 rounded-lg mr-2 hover:bg-primary-700 transition-smooth">
                                     <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                                     </svg>
                                 </button>
                             </div>

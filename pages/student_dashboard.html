@@ -28,13 +28,6 @@
                     <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
                     <a href="scholarship_search_results.html" class="text-text-secondary hover:text-primary transition-smooth">Scholarships</a>
                     <a href="college_partnership_hub.html" class="text-text-secondary hover:text-primary transition-smooth">Colleges</a>
-                    <div class="relative" x-data="{ open: false }">
-                        <button @click="open = !open" class="btn-primary">Login</button>
-                        <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
-                            <a href="student_login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Student Login</a>
-                            <a href="college_login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">College Login</a>
-                        </div>
-                    </div>
                     <a href="student_dashboard.html" class="text-primary font-semibold">Dashboard</a>
                 </div>
 
@@ -128,68 +121,95 @@
                         <button class="btn-primary mt-4">Complete Profile</button>
                     </div>
 
-                    <!-- Claimed Scholarships -->
+                    <!-- Active Applications -->
                     <div class="card">
                         <div class="flex items-center justify-between mb-6">
-                            <h2 class="text-xl font-semibold text-secondary">Claimed Scholarships</h2>
+                            <h2 class="text-xl font-semibold text-secondary">Active Applications</h2>
                             <a href="scholarship_search_results.html" class="text-primary hover:text-primary-700 transition-smooth text-sm font-medium">View All</a>
                         </div>
                         
                         <div class="space-y-4">
-                            <!-- Scholarship 1 -->
+                            <!-- Application 1 -->
                             <div class="border border-secondary-200 rounded-lg p-4 hover:shadow-subtle transition-smooth">
                                 <div class="flex items-start justify-between mb-3">
                                     <div class="flex-1">
-                                        <h3 class="font-semibold text-secondary mb-1">Tech Leaders Scholarship</h3>
-                                        <p class="text-sm text-text-secondary">Google • ₹5,00,000</p>
+                                        <h3 class="font-semibold text-secondary mb-1">Merit-Based Engineering Scholarship</h3>
+                                        <p class="text-sm text-text-secondary">IIT Delhi • ₹2,50,000</p>
                                     </div>
-                                    <span class="bg-success-100 text-success-600 px-3 py-1 rounded-full text-xs font-semibold">Claimed</span>
+                                    <span class="bg-accent-100 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold">Under Review</span>
                                 </div>
                                 <div class="flex items-center justify-between text-sm">
                                     <div class="flex items-center text-text-secondary">
                                         <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a4 4 0 118 0v4m-4 8a2 2 0 100-4 2 2 0 000 4zm0 0v4a2 2 0 002 2h6a2 2 0 002-2v-4"/>
                                         </svg>
-                                        Claimed on: 1 Feb 2025
+                                        Applied: 15 Jan 2025
                                     </div>
+                                    <div class="flex items-center text-accent">
+                                        <svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        Result: 28 Feb 2025
+                                    </div>
+                                </div>
+                                <div class="mt-3 w-full bg-secondary-100 rounded-full h-2">
+                                    <div class="bg-accent h-2 rounded-full" style="width: 60%"></div>
                                 </div>
                             </div>
 
-                            <!-- Scholarship 2 -->
+                            <!-- Application 2 -->
                             <div class="border border-secondary-200 rounded-lg p-4 hover:shadow-subtle transition-smooth">
                                 <div class="flex items-start justify-between mb-3">
                                     <div class="flex-1">
-                                        <h3 class="font-semibold text-secondary mb-1">Future of India Scholarship</h3>
-                                        <p class="text-sm text-text-secondary">Reliance Foundation • ₹4,00,000</p>
+                                        <h3 class="font-semibold text-secondary mb-1">Women in Technology Scholarship</h3>
+                                        <p class="text-sm text-text-secondary">BITS Pilani • ₹1,50,000</p>
                                     </div>
-                                    <span class="bg-success-100 text-success-600 px-3 py-1 rounded-full text-xs font-semibold">Claimed</span>
+                                    <span class="bg-success-100 text-success-600 px-3 py-1 rounded-full text-xs font-semibold">Approved</span>
                                 </div>
                                 <div class="flex items-center justify-between text-sm">
                                     <div class="flex items-center text-text-secondary">
                                         <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a4 4 0 118 0v4m-4 8a2 2 0 100-4 2 2 0 000 4zm0 0v4a2 2 0 002 2h6a2 2 0 002-2v-4"/>
                                         </svg>
-                                        Claimed on: 15 Feb 2025
+                                        Applied: 10 Jan 2025
                                     </div>
+                                    <div class="flex items-center text-success">
+                                        <svg class="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Congratulations!
+                                    </div>
+                                </div>
+                                <div class="mt-3 w-full bg-secondary-100 rounded-full h-2">
+                                    <div class="bg-success h-2 rounded-full" style="width: 100%"></div>
                                 </div>
                             </div>
 
-                            <!-- Scholarship 3 -->
+                            <!-- Application 3 -->
                             <div class="border border-secondary-200 rounded-lg p-4 hover:shadow-subtle transition-smooth">
                                 <div class="flex items-start justify-between mb-3">
                                     <div class="flex-1">
-                                        <h3 class="font-semibold text-secondary mb-1">Young Innovator Award</h3>
-                                        <p class="text-sm text-text-secondary">Tata Group • ₹3,50,000</p>
+                                        <h3 class="font-semibold text-secondary mb-1">Rural Excellence Scholarship</h3>
+                                        <p class="text-sm text-text-secondary">NIT Surat • ₹3,00,000</p>
                                     </div>
-                                    <span class="bg-success-100 text-success-600 px-3 py-1 rounded-full text-xs font-semibold">Claimed</span>
+                                    <span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-xs font-semibold">Submitted</span>
                                 </div>
                                 <div class="flex items-center justify-between text-sm">
                                     <div class="flex items-center text-text-secondary">
                                         <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a4 4 0 118 0v4m-4 8a2 2 0 100-4 2 2 0 000 4zm0 0v4a2 2 0 002 2h6a2 2 0 002-2v-4"/>
                                         </svg>
-                                        Claimed on: 1 Mar 2025
+                                        Applied: 20 Jan 2025
                                     </div>
+                                    <div class="flex items-center text-accent">
+                                        <svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                        Result: 15 Mar 2025
+                                    </div>
+                                </div>
+                                <div class="mt-3 w-full bg-secondary-100 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 25%"></div>
                                 </div>
                             </div>
                         </div>
