@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Partnership Hub - ScholarPath</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Discover verified college partnerships and exclusive scholarship opportunities. Connect with 500+ trusted institutions offering merit-based and need-based scholarships." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fscholarpat4968back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-subtle sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                        <path d="M14 14l-2-2-1.41 1.41L14 16.83l6-6L18.59 9.42 14 14z" fill="white"/>
+                    </svg>
+                    <span class="text-xl font-bold text-secondary">ScholarPath</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
+                    <a href="scholarship_search_results.html" class="text-text-secondary hover:text-primary transition-smooth">Scholarships</a>
+                    <a href="college_partnership_hub.html" class="text-primary font-semibold">Colleges</a>
+                    <a href="student_dashboard.html" class="btn-primary">Dashboard</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2">
+                    <svg class="h-6 w-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-white py-16 lg:py-20 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <svg class="w-full h-full" viewBox="0 0 100 100" fill="currentColor">
+                <defs>
+                    <pattern id="college-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="10" cy="10" r="1" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#college-pattern)"/>
+            </svg>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-6 text-balance">
+                    Verified College 
+                    <span class="text-primary">Partnerships</span>
+                </h1>
+                <p class="text-xl text-text-secondary mb-8 max-w-3xl mx-auto text-balance">
+                    Connect with 500+ trusted institutions offering exclusive scholarships and verified opportunities
+                </p>
+
+                <!-- Search & Filter Bar -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-strong p-6">
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <!-- Search Input -->
+                            <div class="flex-1 relative">
+                                <svg class="h-5 w-5 text-text-secondary absolute left-3 top-1/2 transform -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                </svg>
+                                <input type="text" placeholder="Search colleges by name, location, or course..." class="w-full pl-10 pr-4 py-3 border border-secondary-200 rounded-lg focus:ring-4 focus:ring-primary-100 focus:border-primary transition-smooth" />
+                            </div>
+                            
+                            <!-- Location Filter -->
+                            <select class="px-4 py-3 border border-secondary-200 rounded-lg focus:ring-4 focus:ring-primary-100 focus:border-primary transition-smooth">
+                                <option>All States</option>
+                                <option>Delhi</option>
+                                <option>Maharashtra</option>
+                                <option>Karnataka</option>
+                                <option>Tamil Nadu</option>
+                                <option>Gujarat</option>
+                            </select>
+
+                            <!-- Course Filter -->
+                            <select class="px-4 py-3 border border-secondary-200 rounded-lg focus:ring-4 focus:ring-primary-100 focus:border-primary transition-smooth">
+                                <option>All Courses</option>
+                                <option>Engineering</option>
+                                <option>Medical</option>
+                                <option>Management</option>
+                                <option>Arts & Science</option>
+                                <option>Law</option>
+                            </select>
+
+                            <!-- Search Button -->
+                            <button class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-smooth flex items-center">
+                                <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.414A1 1 0 013 6.707V4z"/>
+                                </svg>
+                                Filter
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partnership Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="bg-white rounded-lg p-6 shadow-subtle">
+                    <div class="text-3xl font-bold text-primary mb-2">500+</div>
+                    <div class="text-sm text-text-secondary">Verified Partners</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-subtle">
+                    <div class="text-3xl font-bold text-success mb-2">₹15+</div>
+                    <div class="text-sm text-text-secondary">Crores Available</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-subtle">
+                    <div class="text-3xl font-bold text-accent mb-2">2,847</div>
+                    <div class="text-sm text-text-secondary">Active Scholarships</div>
+                </div>
+                <div class="bg-white rounded-lg p-6 shadow-subtle">
+                    <div class="text-3xl font-bold text-secondary mb-2">92%</div>
+                    <div class="text-sm text-text-secondary">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Colleges -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Featured Colleges</h2>
+                    <p class="text-lg text-text-secondary">Top-rated institutions with exclusive scholarship programs</p>
+                </div>
+                <div class="hidden md:flex space-x-4">
+                    <button class="btn-secondary">View All</button>
+                    <button class="btn-primary">Compare Colleges</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- College Card 1 -->
+                <div class="card hover:shadow-strong transition-smooth">
+                    <div class="relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2786&auto=format&fit=crop&ixlib=rb-4.0.3" alt="IIT Delhi Campus" class="w-full h-48 object-cover rounded-lg" onerror="this.src='https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute top-3 right-3 bg-success text-white px-2 py-1 rounded-full text-xs font-semibold">
+                            ✓ VERIFIED
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-1">Indian Institute of Technology Delhi</h3>
+                            <p class="text-text-secondary text-sm">📍 New Delhi, Delhi</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-lg font-bold text-primary">4.8★</div>
+                            <div class="text-xs text-text-secondary">2,847 reviews</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 mb-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-secondary">Available Scholarships</span>
+                            <span class="font-semibold text-primary">47 Active</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-secondary">Total Scholarship Value</span>
+                            <span class="font-semibold text-success">₹2.5 Crores</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-secondary">Success Rate</span>
+                            <span class="font-semibold text-accent">94%</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-primary-50 text-primary px-2 py-1 rounded-full text-xs">Engineering</span>
+                        <span class="bg-accent-50 text-amber-700 px-2 py-1 rounded-full text-xs">Research</span>
+                        <span class="bg-success-50 text-success-600 px-2 py-1 rounded-full text-xs">NIRF Rank 1</span>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <a href="scholarship_search_results.html" class="flex-1 btn-primary text-center">View Scholarships</a>
+                        <button class="px-4 py-3 border border-secondary-200 rounded-lg hover:bg-secondary-50 transition-smooth">
+                            <svg class="h-5 w-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- College Card 2 -->
+                <div class="card hover:shadow-strong transition-smooth">
+                    <div class="relative mb-4">
+                        <img src="https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="BITS Pilani Campus" class="w-full h-48 object-cover rounded-lg" onerror="this.src='https://images.pixabay.com/photo/2017/05/09/13/33/university-2297312_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute top-3 right-3 bg-success text-white px-2 py-1 rounded-full text-xs font-semibold">
+                            ✓ VERIFIED
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-1">BITS Pilani</h3>
+                            <p class="text-text-secondary text-sm">📍 Pilani, Rajasthan</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-lg font-bold text-primary">4.6★</div>
+                            <div class="text-xs text-text-secondary">1,923 reviews</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 mb-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-secondary">Available Scholarships</span>
+                            <span class="font-semibold text-primary">32 Active</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-secondary">Total Scholarship Value</span>
+                            <span class="font-semibold text-success">₹1.8 Crores</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-secondary">Success Rate</span>
+                            <span class="font-semibold text-accent">89%</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-primary-50 text-primary px-2 py-1 rounded-full text-xs">Engineering</span>
+                        <span class="bg-accent-50 text-amber-700 px-2 py-1 rounded-full text-xs">Management</span>
+                        <span class="bg-success-50 text-success-600 px-2 py-1 rounded-full text-xs">Private</span>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <a href="scholarship_search_results.html" class="flex-1 btn-primary text-center">View Scholarships</a>
+                        <button class="px-4 py-3 border border-secondary-200 rounded-lg hover:bg-secondary-50 transition-smooth">
+                            <svg class="h-5 w-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- College Card 3 -->
+                <div class="card hover:shadow-strong transition-smooth">
+                    <div class="relative mb-4">
+                        <img src="https://images.pixabay.com/photo/2016/06/13/09/57/university-1454605_1280.jpg" alt="NIT Surat Campus" class="w-full h-48 object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="absolute top-3 right-3 bg-success text-white px-2 py-1 rounded-full text-xs font-semibold">
+                            ✓ VERIFIED
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start justify-between mb-3">
+                        <div>
+                            <h3 class="text-xl font-semibold text-secondary mb-1">NIT Surat</h3>
+                            <p class="text-text-secondary text-sm">📍 Surat, Gujarat</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-lg font-bold text-primary">4.5★</div>
+                            <div class="text-xs text-text-secondary">1,456 reviews</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 mb-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-secondary">Available Scholarships</span>
+                            <span class="font-semibold text-primary">28 Active</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-secondary">Total Scholarship Value</span>
+                            <span class="font-semibold text-success">₹1.2 Crores</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-secondary">Success Rate</span>
+                            <span class="font-semibold text-accent">91%</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-primary-50 text-primary px-2 py-1 rounded-full text-xs">Engineering</span>
+                        <span class="bg-accent-50 text-amber-700 px-2 py-1 rounded-full text-xs">Technology</span>
+                        <span class="bg-success-50 text-success-600 px-2 py-1 rounded-full text-xs">NIT</span>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <a href="scholarship_search_results.html" class="flex-1 btn-primary text-center">View Scholarships</a>
+                        <button class="px-4 py-3 border border-secondary-200 rounded-lg hover:bg-secondary-50 transition-smooth">
+                            <svg class="h-5 w-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scholarship Categories -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Scholarship Categories</h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">Explore scholarships by type and find the perfect match for your profile</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Merit-Based -->
+                <div class="card-elevated text-center hover:shadow-strong transition-smooth">
+                    <div class="bg-primary-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Merit-Based Scholarships</h3>
+                    <p class="text-text-secondary mb-4">Recognize academic excellence with scholarships for top performers</p>
+                    <div class="text-2xl font-bold text-primary mb-4">1,247 Available</div>
+                    <a href="scholarship_search_results.html" class="btn-primary w-full">Explore Merit Scholarships</a>
+                </div>
+
+                <!-- Need-Based -->
+                <div class="card-elevated text-center hover:shadow-strong transition-smooth">
+                    <div class="bg-success-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Need-Based Scholarships</h3>
+                    <p class="text-text-secondary mb-4">Financial assistance for students from economically weaker sections</p>
+                    <div class="text-2xl font-bold text-success mb-4">892 Available</div>
+                    <a href="scholarship_search_results.html" class="btn-primary w-full">Explore Need-Based</a>
+                </div>
+
+                <!-- Course-Specific -->
+                <div class="card-elevated text-center hover:shadow-strong transition-smooth">
+                    <div class="bg-accent-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="h-8 w-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Course-Specific Scholarships</h3>
+                    <p class="text-text-secondary mb-4">Specialized funding for specific fields of study and research</p>
+                    <div class="text-2xl font-bold text-accent mb-4">708 Available</div>
+                    <a href="scholarship_search_results.html" class="btn-primary w-full">Explore by Course</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- College Comparison Tool -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">College Comparison Tool</h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">Compare colleges based on scholarships, courses, and career outcomes</p>
+            </div>
+
+            <div class="bg-surface rounded-2xl p-8">
+                <div class="grid md:grid-cols-3 gap-8 mb-8">
+                    <!-- College Selection 1 -->
+                    <div class="bg-white rounded-lg p-6 border-2 border-primary">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-primary font-bold">IIT</span>
+                            </div>
+                            <h3 class="font-semibold text-secondary">IIT Delhi</h3>
+                            <p class="text-sm text-text-secondary">New Delhi</p>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>Scholarships:</span>
+                                <span class="font-semibold">47</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Success Rate:</span>
+                                <span class="font-semibold text-success">94%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>NIRF Rank:</span>
+                                <span class="font-semibold">1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VS Indicator -->
+                    <div class="flex items-center justify-center">
+                        <div class="bg-accent text-white w-12 h-12 rounded-full flex items-center justify-center font-bold">
+                            VS
+                        </div>
+                    </div>
+
+                    <!-- College Selection 2 -->
+                    <div class="bg-white rounded-lg p-6 border-2 border-secondary-200">
+                        <div class="text-center mb-4">
+                            <div class="w-16 h-16 bg-secondary-50 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-secondary font-bold">BITS</span>
+                            </div>
+                            <h3 class="font-semibold text-secondary">BITS Pilani</h3>
+                            <p class="text-sm text-text-secondary">Pilani, Rajasthan</p>
+                        </div>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex justify-between">
+                                <span>Scholarships:</span>
+                                <span class="font-semibold">32</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Success Rate:</span>
+                                <span class="font-semibold text-success">89%</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>NIRF Rank:</span>
+                                <span class="font-semibold">25</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn-primary mr-4">Compare More Colleges</button>
+                    <button class="btn-secondary">View Detailed Comparison</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Testimonials -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Student Success Stories</h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">Real experiences from students who found their perfect college match</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="card-elevated">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Rahul Kumar" class="w-12 h-12 rounded-full mr-4 object-cover" onerror="this.src='https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-secondary">Rahul Kumar</h4>
+                            <p class="text-sm text-text-secondary">IIT Delhi, B.Tech CSE</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"ScholarPath helped me discover a merit scholarship worth ₹2.5 lakhs at IIT Delhi. The college partnership made the application process seamless."</p>
+                    <div class="flex items-center">
+                        <div class="flex text-accent mr-2">
+                            ★★★★★
+                        </div>
+                        <span class="text-sm text-text-secondary">5.0 rating</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="card-elevated">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Priya Sharma" class="w-12 h-12 rounded-full mr-4 object-cover" onerror="this.src='https://images.unsplash.com/photo-1494790108755-2616b332c1c2?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-secondary">Priya Sharma</h4>
+                            <p class="text-sm text-text-secondary">BITS Pilani, B.Tech ECE</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"The college comparison tool was incredibly helpful. I could compare scholarship opportunities across multiple colleges and make an informed decision."</p>
+                    <div class="flex items-center">
+                        <div class="flex text-accent mr-2">
+                            ★★★★★
+                        </div>
+                        <span class="text-sm text-text-secondary">5.0 rating</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="card-elevated">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg" alt="Arjun Patel" class="w-12 h-12 rounded-full mr-4 object-cover" onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-secondary">Arjun Patel</h4>
+                            <p class="text-sm text-text-secondary">NIT Surat, B.Tech Mechanical</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"As a rural student, I found verified college partnerships gave me confidence. The need-based scholarship covered my entire tuition fee."</p>
+                    <div class="flex items-center">
+                        <div class="flex text-accent mr-2">
+                            ★★★★★
+                        </div>
+                        <span class="text-sm text-text-secondary">5.0 rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Find Your Perfect College Match?</h2>
+            <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+                Join thousands of students who have successfully found scholarships through our verified college partnerships
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="student_dashboard.html" class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-smooth">
+                    Create Student Profile
+                </a>
+                <a href="scholarship_search_results.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-smooth">
+                    Browse Scholarships
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                            <path d="M14 14l-2-2-1.41 1.41L14 16.83l6-6L18.59 9.42 14 14z" fill="white"/>
+                        </svg>
+                        <span class="text-xl font-bold">ScholarPath</span>
+                    </div>
+                    <p class="text-secondary-200 mb-4">Every merit deserves opportunity. Transform your educational dreams into reality.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="scholarship_search_results.html" class="text-secondary-200 hover:text-white transition-smooth">Find Scholarships</a></li>
+                        <li><a href="student_dashboard.html" class="text-secondary-200 hover:text-white transition-smooth">Student Dashboard</a></li>
+                        <li><a href="college_partnership_hub.html" class="text-secondary-200 hover:text-white transition-smooth">College Partners</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-white transition-smooth">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-white transition-smooth">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-white transition-smooth">WhatsApp Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-secondary-200">
+                        <p>📧 support@scholarpath.in</p>
+                        <p>📱 +91 98765 43210</p>
+                        <p>🕒 Mon-Sat: 9 AM - 6 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-secondary-700 mt-8 pt-8 text-center text-secondary-200">
+                <p>&copy; 2025 ScholarPath. All Rights Reserved. | Empowering students across India</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

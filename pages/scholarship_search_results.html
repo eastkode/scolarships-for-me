@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scholarship Search Results - ScholarPath</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Discover and filter through thousands of scholarships. Find the perfect educational funding opportunities with advanced search and comparison tools." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fscholarpat4968back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-subtle sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                        <path d="M14 14l-2-2-1.41 1.41L14 16.83l6-6L18.59 9.42 14 14z" fill="white"/>
+                    </svg>
+                    <span class="text-xl font-bold text-secondary">ScholarPath</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
+                    <a href="scholarship_search_results.html" class="text-primary font-semibold">Scholarships</a>
+                    <a href="college_partnership_hub.html" class="text-text-secondary hover:text-primary transition-smooth">Colleges</a>
+                    <a href="student_dashboard.html" class="btn-primary">Dashboard</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" onclick="toggleMobileFilters()">
+                    <svg class="h-6 w-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Header -->
+    <section class="bg-primary-50 py-6 border-b border-primary-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-2xl">
+                    <div class="relative">
+                        <div class="flex items-center bg-white rounded-xl border-2 border-primary-200 focus-within:border-primary transition-smooth">
+                            <svg class="h-5 w-5 text-text-secondary ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                            <input type="text" placeholder="Search scholarships..." class="flex-1 px-4 py-3 bg-transparent focus:outline-none" value="Engineering scholarships" />
+                            <button class="bg-primary text-white px-4 py-3 rounded-lg mr-2 hover:bg-primary-700 transition-smooth">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Summary & Sort -->
+                <div class="flex items-center gap-4">
+                    <div class="text-text-secondary">
+                        <span class="font-semibold text-secondary">2,847</span> scholarships found
+                    </div>
+                    <select class="bg-white border border-secondary-200 rounded-lg px-4 py-2 focus:outline-none focus:border-primary">
+                        <option>Sort by Relevance</option>
+                        <option>Sort by Amount (High to Low)</option>
+                        <option>Sort by Amount (Low to High)</option>
+                        <option>Sort by Deadline</option>
+                        <option>Sort by Eligibility Match</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="lg:flex lg:gap-8">
+            <!-- Sidebar Filters -->
+            <div class="hidden lg:block w-80 flex-shrink-0">
+                <div class="sticky top-24">
+                    <!-- Filter Header -->
+                    <div class="bg-white rounded-lg shadow-subtle p-6 mb-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-secondary">Filters</h3>
+                            <button class="text-primary hover:text-primary-700 text-sm font-medium">Clear All</button>
+                        </div>
+
+                        <!-- Course Type Filter -->
+                        <div class="mb-6">
+                            <h4 class="font-medium text-secondary mb-3">Course Type</h4>
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" checked />
+                                    <span class="ml-2 text-text-secondary">Engineering (1,245)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">Medical (892)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">Arts & Humanities (634)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">Commerce (456)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">Science (789)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Amount Range Filter -->
+                        <div class="mb-6">
+                            <h4 class="font-medium text-secondary mb-3">Scholarship Amount</h4>
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">₹10,000 - ₹50,000 (1,456)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" checked />
+                                    <span class="ml-2 text-text-secondary">₹50,000 - ₹2,00,000 (892)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">₹2,00,000+ (499)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- State Filter -->
+                        <div class="mb-6">
+                            <h4 class="font-medium text-secondary mb-3">State</h4>
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">All India (2,103)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">Maharashtra (298)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">Karnataka (234)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">Tamil Nadu (187)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Merit Requirements -->
+                        <div class="mb-6">
+                            <h4 class="font-medium text-secondary mb-3">Merit Requirements</h4>
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">60%+ marks (2,456)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">75%+ marks (1,234)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">85%+ marks (567)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Special Categories -->
+                        <div>
+                            <h4 class="font-medium text-secondary mb-3">Special Categories</h4>
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">Women Only (345)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">Rural Students (234)</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded border-secondary-300 text-primary focus:ring-primary-100" />
+                                    <span class="ml-2 text-text-secondary">SC/ST/OBC (456)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Saved Searches -->
+                    <div class="bg-white rounded-lg shadow-subtle p-6">
+                        <h3 class="text-lg font-semibold text-secondary mb-4">Saved Searches</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center justify-between p-3 bg-primary-50 rounded-lg">
+                                <span class="text-sm text-primary font-medium">Engineering + Merit</span>
+                                <button class="text-text-secondary hover:text-error">
+                                    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Filter Drawer -->
+            <div id="mobileFilterDrawer" class="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden hidden">
+                <div class="fixed inset-y-0 left-0 w-80 bg-white overflow-y-auto">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-lg font-semibold text-secondary">Filters</h3>
+                            <button onclick="toggleMobileFilters()" class="text-text-secondary">
+                                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- Same filter content as sidebar -->
+                        <div class="space-y-6">
+                            <!-- Filters content would be duplicated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Area -->
+            <div class="flex-1 min-w-0">
+                <!-- Active Filters -->
+                <div class="mb-6">
+                    <div class="flex flex-wrap gap-2">
+                        <div class="bg-primary-100 text-primary px-3 py-1 rounded-full text-sm flex items-center">
+                            Engineering
+                            <button class="ml-2 text-primary-700">
+                                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="bg-primary-100 text-primary px-3 py-1 rounded-full text-sm flex items-center">
+                            ₹50,000 - ₹2,00,000
+                            <button class="ml-2 text-primary-700">
+                                <svg class="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparison Bar -->
+                <div id="comparisonBar" class="bg-accent-50 border border-accent-200 rounded-lg p-4 mb-6 hidden">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <span class="font-medium text-accent">Compare Scholarships (</span>
+                            <span id="comparisonCount" class="font-bold text-accent">0</span>
+                            <span class="font-medium text-accent">/3)</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <button class="btn-primary text-sm">Compare Now</button>
+                            <button onclick="clearComparison()" class="text-accent hover:text-amber-700 text-sm font-medium">Clear All</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scholarship Results Grid -->
+                <div class="space-y-6" id="scholarshipResults">
+                    <!-- Scholarship Card 1 -->
+                    <div class="card hover:shadow-strong transition-smooth">
+                        <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+                            <!-- Left Section -->
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="bg-primary-50 p-3 rounded-lg">
+                                            <svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-secondary mb-1">Merit-Based Engineering Scholarship</h3>
+                                            <div class="flex items-center gap-2 text-sm text-text-secondary">
+                                                <span class="bg-success-100 text-success-600 px-2 py-1 rounded-full text-xs font-semibold flex items-center">
+                                                    <svg class="h-3 w-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    VERIFIED
+                                                </span>
+                                                <span class="text-text-secondary">• National Education Foundation</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div class="text-right">
+                                            <div class="text-2xl font-bold text-primary">₹2,50,000</div>
+                                            <div class="text-sm text-text-secondary">Per year</div>
+                                        </div>
+                                        <input type="checkbox" class="compare-checkbox rounded border-secondary-300 text-primary focus:ring-primary-100" data-scholarship-id="1" onchange="updateComparison()" />
+                                    </div>
+                                </div>
+
+                                <!-- Eligibility Criteria -->
+                                <div class="mb-4">
+                                    <div class="grid md:grid-cols-2 gap-4">
+                                        <div class="space-y-2">
+                                            <div class="flex items-center text-sm">
+                                                <svg class="h-4 w-4 mr-2 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                </svg>
+                                                <span class="text-text-secondary">Class 12: 85%+ marks</span>
+                                            </div>
+                                            <div class="flex items-center text-sm">
+                                                <svg class="h-4 w-4 mr-2 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                </svg>
+                                                <span class="text-text-secondary">JEE Main qualified</span>
+                                            </div>
+                                        </div>
+                                        <div class="space-y-2">
+                                            <div class="flex items-center text-sm">
+                                                <svg class="h-4 w-4 mr-2 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                </svg>
+                                                <span class="text-text-secondary">Family income < ₹8 LPA</span>
+                                            </div>
+                                            <div class="flex items-center text-sm">
+                                                <div class="bg-primary-100 text-primary px-2 py-1 rounded text-xs font-medium">92% Match</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Deadline & Actions -->
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                                    <div class="flex items-center gap-4">
+                                        <div class="flex items-center text-sm text-accent">
+                                            <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                            <span class="font-medium">Deadline: 15 Feb 2025</span>
+                                            <span class="bg-warning-100 text-amber-700 px-2 py-1 rounded-full text-xs font-semibold ml-2">23 days left</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <button class="text-text-secondary hover:text-primary p-2 rounded-lg hover:bg-primary-50 transition-smooth" title="Save scholarship">
+                                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="btn-secondary text-sm">View Details</button>
+                                        <button class="btn-primary text-sm">Claim Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scholarship Card 2 -->
+                    <div class="card hover:shadow-strong transition-smooth">
+                        <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="bg-accent-50 p-3 rounded-lg">
+                                            <svg class="h-6 w-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-secondary mb-1">Women in Technology Excellence Award</h3>
+                                            <div class="flex items-center gap-2 text-sm text-text-secondary">
+                                                <span class="bg-success-100 text-success-600 px-2 py-1 rounded-full text-xs font-semibold flex items-center">
+                                                    <svg class="h-3 w-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    VERIFIED
+                                                </span>
+                                                <div class="flex items-center gap-1">
+                                                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3" alt="BITS Pilani" class="w-4 h-4 rounded-full object-cover" />
+                                                    <span class="text-text-secondary">• BITS Pilani Partnership</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div class="text-right">
+                                            <div class="text-2xl font-bold text-primary">₹1,50,000</div>
+                                            <div class="text-sm text-text-secondary">One-time</div>
+                                        </div>
+                                        <input type="checkbox" class="compare-checkbox rounded border-secondary-300 text-primary focus:ring-primary-100" data-scholarship-id="2" onchange="updateComparison()" />
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="grid md:grid-cols-2 gap-4">
+                                        <div class="space-y-2">
+                                            <div class="flex items-center text-sm">
+                                                <svg class="h-4 w-4 mr-2 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                </svg>
+                                                <span class="text-text-secondary">Female candidates only</span>
+                                            </div>
+                                            <div class="flex items-center text-sm">
+                                                <svg class="h-4 w-4 mr-2 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                </svg>
+                                                <span class="text-text-secondary">CS/IT/ECE streams</span>
+                                            </div>
+                                        </div>
+                                        <div class="space-y-2">
+                                            <div class="flex items-center text-sm">
+                                                <span class="bg-accent-100 text-amber-700 px-2 py-1 rounded-full text-xs font-semibold">LIMITED SEATS</span>
+                                            </div>
+                                            <div class="flex items-center text-sm">
+                                                <div class="bg-accent-100 text-amber-700 px-2 py-1 rounded text-xs font-medium">78% Match</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                                    <div class="flex items-center gap-4">
+                                        <div class="flex items-center text-sm text-error">
+                                            <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                            <span class="font-medium">Deadline: 28 Jan 2025</span>
+                                            <span class="bg-error-100 text-red-700 px-2 py-1 rounded-full text-xs font-semibold ml-2">5 days left</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <button class="text-text-secondary hover:text-primary p-2 rounded-lg hover:bg-primary-50 transition-smooth">
+                                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="btn-secondary text-sm">View Details</button>
+                                        <button class="btn-primary text-sm bg-error hover:bg-red-600">Claim Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scholarship Card 3 -->
+                    <div class="card hover:shadow-strong transition-smooth">
+                        <div class="flex flex-col lg:flex-row lg:items-start gap-6">
+                            <div class="flex-1">
+                                <div class="flex items-start justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="bg-success-50 p-3 rounded-lg">
+                                            <svg class="h-6 w-6 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-semibold text-secondary mb-1">Rural Excellence Engineering Grant</h3>
+                                            <div class="flex items-center gap-2 text-sm text-text-secondary">
+                                                <span class="bg-success-100 text-success-600 px-2 py-1 rounded-full text-xs font-semibold flex items-center">
+                                                    <svg class="h-3 w-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    VERIFIED
+                                                </span>
+                                                <div class="flex items-center gap-1">
+                                                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3" alt="NIT Surat" class="w-4 h-4 rounded-full object-cover" />
+                                                    <span class="text-text-secondary">• NIT Surat Partnership</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <div class="text-right">
+                                            <div class="text-2xl font-bold text-primary">₹3,00,000</div>
+                                            <div class="text-sm text-text-secondary">Per year (4 years)</div>
+                                        </div>
+                                        <input type="checkbox" class="compare-checkbox rounded border-secondary-300 text-primary focus:ring-primary-100" data-scholarship-id="3" onchange="updateComparison()" />
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="grid md:grid-cols-2 gap-4">
+                                        <div class="space-y-2">
+                                            <div class="flex items-center text-sm">
+                                                <svg class="h-4 w-4 mr-2 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                </svg>
+                                                <span class="text-text-secondary">Rural area students</span>
+                                            </div>
+                                            <div class="flex items-center text-sm">
+                                                <svg class="h-4 w-4 mr-2 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                                </svg>
+                                                <span class="text-text-secondary">Family income < ₹5 LPA</span>
+                                            </div>
+                                        </div>
+                                        <div class="space-y-2">
+                                            <div class="flex items-center text-sm">
+                                                <span class="bg-primary-100 text-primary px-2 py-1 rounded-full text-xs font-semibold">HIGH DEMAND</span>
+                                            </div>
+                                            <div class="flex items-center text-sm">
+                                                <div class="bg-success-100 text-success-600 px-2 py-1 rounded text-xs font-medium">95% Match</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                                    <div class="flex items-center gap-4">
+                                        <div class="flex items-center text-sm text-success">
+                                            <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                            </svg>
+                                            <span class="font-medium">Deadline: 10 Mar 2025</span>
+                                            <span class="bg-success-100 text-success-600 px-2 py-1 rounded-full text-xs font-semibold ml-2">48 days left</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <button class="text-text-secondary hover:text-primary p-2 rounded-lg hover:bg-primary-50 transition-smooth">
+                                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                                            </svg>
+                                        </button>
+                                        <button class="btn-secondary text-sm">View Details</button>
+                                        <button class="btn-primary text-sm">Claim Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center mt-12">
+                    <button class="btn-secondary mr-4" onclick="loadMoreScholarships()">Load More Scholarships</button>
+                    <div class="text-sm text-text-secondary mt-2">Showing 3 of 2,847 scholarships</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                            <path d="M14 14l-2-2-1.41 1.41L14 16.83l6-6L18.59 9.42 14 14z" fill="white"/>
+                        </svg>
+                        <span class="text-xl font-bold">ScholarPath</span>
+                    </div>
+                    <p class="text-secondary-200 mb-4">Every merit deserves opportunity. Find your perfect scholarship today.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="homepage.html" class="text-secondary-200 hover:text-white transition-smooth">Home</a></li>
+                        <li><a href="student_dashboard.html" class="text-secondary-200 hover:text-white transition-smooth">Student Dashboard</a></li>
+                        <li><a href="college_partnership_hub.html" class="text-secondary-200 hover:text-white transition-smooth">College Partners</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-white transition-smooth">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-white transition-smooth">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-white transition-smooth">WhatsApp Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-secondary-200">
+                        <p>📧 support@scholarpath.in</p>
+                        <p>📱 +91 98765 43210</p>
+                        <p>🕒 Mon-Sat: 9 AM - 6 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-secondary-700 mt-8 pt-8 text-center text-secondary-200">
+                <p>&copy; 2025 ScholarPath. All Rights Reserved. | Helping students access educational opportunities</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile filter drawer functionality
+        function toggleMobileFilters() {
+            const drawer = document.getElementById('mobileFilterDrawer');
+            drawer.classList.toggle('hidden');
+        }
+
+        // Comparison functionality
+        let selectedScholarships = [];
+        
+        function updateComparison() {
+            const checkboxes = document.querySelectorAll('.compare-checkbox:checked');
+            const comparisonBar = document.getElementById('comparisonBar');
+            const comparisonCount = document.getElementById('comparisonCount');
+            
+            selectedScholarships = Array.from(checkboxes).map(cb => cb.dataset.scholarshipId);
+            comparisonCount.textContent = selectedScholarships.length;
+            
+            if (selectedScholarships.length > 0) {
+                comparisonBar.classList.remove('hidden');
+            } else {
+                comparisonBar.classList.add('hidden');
+            }
+            
+            // Prevent more than 3 selections
+            if (selectedScholarships.length >= 3) {
+                const uncheckedBoxes = document.querySelectorAll('.compare-checkbox:not(:checked)');
+                uncheckedBoxes.forEach(cb => cb.disabled = true);
+            } else {
+                const allBoxes = document.querySelectorAll('.compare-checkbox');
+                allBoxes.forEach(cb => cb.disabled = false);
+            }
+        }
+        
+        function clearComparison() {
+            const checkboxes = document.querySelectorAll('.compare-checkbox');
+            checkboxes.forEach(cb => {
+                cb.checked = false;
+                cb.disabled = false;
+            });
+            selectedScholarships = [];
+            document.getElementById('comparisonBar').classList.add('hidden');
+        }
+
+        // Progressive loading simulation
+        function loadMoreScholarships() {
+            // Simulate loading more scholarships
+            const button = event.target;
+            button.textContent = 'Loading...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.textContent = 'Load More Scholarships';
+                button.disabled = false;
+                // In a real app, this would append more scholarship cards
+            }, 1500);
+        }
+
+        // Filter interaction simulation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add real-time filter count updates
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:not(.compare-checkbox)');
+            checkboxes.forEach(cb => {
+                cb.addEventListener('change', function() {
+                    // Simulate filter application with count update
+                    const resultsText = document.querySelector('.max-w-7xl .flex .text-text-secondary');
+                    if (resultsText) {
+                        const randomCount = Math.floor(Math.random() * 1000) + 1000;
+                        resultsText.innerHTML = `<span class="font-semibold text-secondary">${randomCount.toLocaleString()}</span> scholarships found`;
+                    }
+                });
+            });
+        });
+
+        // Search functionality simulation
+        document.querySelector('input[type="text"]').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                // Simulate search
+                const resultsText = document.querySelector('.max-w-7xl .flex .text-text-secondary');
+                if (resultsText) {
+                    const randomCount = Math.floor(Math.random() * 2000) + 500;
+                    resultsText.innerHTML = `<span class="font-semibold text-secondary">${randomCount.toLocaleString()}</span> scholarships found`;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
