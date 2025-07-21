@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/main.css" />
     <meta name="description" content="Discover and filter through thousands of scholarships. Find the perfect educational funding opportunities with advanced search and comparison tools." />
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fscholarpat4968back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -27,8 +28,13 @@
                     <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
                     <a href="scholarship_search_results.html" class="text-primary font-semibold">Scholarships</a>
                     <a href="college_partnership_hub.html" class="text-text-secondary hover:text-primary transition-smooth">Colleges</a>
-                    <a href="student_login.html" class="text-text-secondary hover:text-primary transition-smooth">Student Login</a>
-                    <a href="college_login.html" class="text-text-secondary hover:text-primary transition-smooth">College Login</a>
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" class="btn-primary">Login</button>
+                        <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
+                            <a href="student_login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Student Login</a>
+                            <a href="college_login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">College Login</a>
+                        </div>
+                    </div>
                     <a href="student_dashboard.html" class="btn-primary">Dashboard</a>
                 </div>
 

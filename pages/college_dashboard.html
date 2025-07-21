@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Dashboard - Scholarships</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Manage your college's scholarships, view applicants, and track analytics on your Scholarships dashboard." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fscholarpat4968back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-subtle sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                        <path d="M14 14l-2-2-1.41 1.41L14 16.83l6-6L18.59 9.42 14 14z" fill="white"/>
+                    </svg>
+                    <span class="text-xl font-bold text-secondary">Scholarships</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
+                    <a href="scholarship_search_results.html" class="text-text-secondary hover:text-primary transition-smooth">Scholarships</a>
+                    <a href="college_partnership_hub.html" class="text-text-secondary hover:text-primary transition-smooth">Colleges</a>
+                    <a href="college_dashboard.html" class="text-primary font-semibold">Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- College Dashboard Header -->
+    <section class="bg-gradient-to-br from-primary-50 to-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-secondary mb-2">Welcome, IIT Delhi!</h1>
+                    <p class="text-lg text-text-secondary">Manage your scholarships and applicants</p>
+                </div>
+                <div class="mt-4 md:mt-0 flex items-center space-x-4">
+                    <div class="bg-white rounded-lg p-4 shadow-subtle">
+                        <div class="text-sm text-text-secondary">Active Scholarships</div>
+                        <div class="text-2xl font-bold text-primary">12</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-subtle">
+                        <div class="text-sm text-text-secondary">Total Applicants</div>
+                        <div class="text-2xl font-bold text-success">1,234</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Dashboard Content -->
+    <section class="py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Left Column - Main Content -->
+                <div class="lg:col-span-2 space-y-8">
+                    <!-- Posted Scholarships -->
+                    <div class="card">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-xl font-semibold text-secondary">Posted Scholarships</h2>
+                            <button class="btn-primary">Post New Scholarship</button>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Scholarship 1 -->
+                            <div class="border border-secondary-200 rounded-lg p-4 hover:shadow-subtle transition-smooth">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-secondary mb-1">Merit-Based Engineering Scholarship</h3>
+                                        <p class="text-sm text-text-secondary">₹2,50,000 • 500 applicants</p>
+                                    </div>
+                                    <span class="bg-success-100 text-success-600 px-3 py-1 rounded-full text-xs font-semibold">Active</span>
+                                </div>
+                            </div>
+
+                            <!-- Scholarship 2 -->
+                            <div class="border border-secondary-200 rounded-lg p-4 hover:shadow-subtle transition-smooth">
+                                <div class="flex items-start justify-between mb-3">
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-secondary mb-1">Women in Technology Scholarship</h3>
+                                        <p class="text-sm text-text-secondary">₹1,50,000 • 250 applicants</p>
+                                    </div>
+                                    <span class="bg-success-100 text-success-600 px-3 py-1 rounded-full text-xs font-semibold">Active</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Applicants -->
+                    <div class="card">
+                        <h2 class="text-xl font-semibold text-secondary mb-6">Recent Applicants</h2>
+                        <div class="space-y-4">
+                            <!-- Applicant 1 -->
+                            <div class="flex items-center justify-between p-4 border border-secondary-200 rounded-lg">
+                                <div class="flex items-center">
+                                    <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Rahul Kumar" class="w-10 h-10 rounded-full object-cover mr-4">
+                                    <div>
+                                        <h4 class="font-semibold text-secondary">Rahul Kumar</h4>
+                                        <p class="text-sm text-text-secondary">Applied for Merit-Based Engineering Scholarship</p>
+                                    </div>
+                                </div>
+                                <button class="btn-secondary text-sm">View Profile</button>
+                            </div>
+                            <!-- Applicant 2 -->
+                            <div class="flex items-center justify-between p-4 border border-secondary-200 rounded-lg">
+                                <div class="flex items-center">
+                                    <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Priya Sharma" class="w-10 h-10 rounded-full object-cover mr-4">
+                                    <div>
+                                        <h4 class="font-semibold text-secondary">Priya Sharma</h4>
+                                        <p class="text-sm text-text-secondary">Applied for Women in Technology Scholarship</p>
+                                    </div>
+                                </div>
+                                <button class="btn-secondary text-sm">View Profile</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                            <path d="M14 14l-2-2-1.41 1.41L14 16.83l6-6L18.59 9.42 14 14z" fill="white"/>
+                        </svg>
+                        <span class="text-xl font-bold">Scholarships</span>
+                    </div>
+                    <p class="text-secondary-200 mb-4">Every merit deserves opportunity. Transform your educational dreams into reality.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="scholarship_search_results.html" class="text-secondary-200 hover:text-white transition-smooth">Find Scholarships</a></li>
+                        <li><a href="student_dashboard.html" class="text-secondary-200 hover:text-white transition-smooth">Student Dashboard</a></li>
+                        <li><a href="college_partnership_hub.html" class="text-secondary-200 hover:text-white transition-smooth">College Partners</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-white transition-smooth">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-white transition-smooth">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-white transition-smooth">WhatsApp Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-secondary-200">
+                        <p>📧 support@scholarships.in</p>
+                        <p>📱 +91 98765 43210</p>
+                        <p>🕒 Mon-Sat: 9 AM - 6 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-secondary-700 mt-8 pt-8 text-center text-secondary-200">
+                <p>&copy; 2025 Scholarships. All Rights Reserved. | Empowering students across India</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
