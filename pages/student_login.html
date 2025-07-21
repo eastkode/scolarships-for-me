@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Login - Scholarships</title>
+    <link rel="stylesheet" href="../css/main.css" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fscholarpat4968back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-subtle sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                        <path d="M14 14l-2-2-1.41 1.41L14 16.83l6-6L18.59 9.42 14 14z" fill="white"/>
+                    </svg>
+                    <span class="text-xl font-bold text-secondary">Scholarships</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
+                    <a href="scholarship_search_results.html" class="text-text-secondary hover:text-primary transition-smooth">Scholarships</a>
+                    <a href="college_partnership_hub.html" class="text-text-secondary hover:text-primary transition-smooth">Colleges</a>
+                    <a href="student_login.html" class="text-primary font-semibold">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Student Login Section -->
+    <section class="flex justify-center items-center h-screen bg-gray-100">
+        <div class="max-w-md w-full bg-white p-8 rounded-lg shadow-md">
+            <div class="flex justify-center mb-6">
+                <svg class="h-16 w-16 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6" />
+                </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-center text-secondary mb-8">Student Login</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="email" class="block text-text-secondary text-sm font-bold mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-text-secondary leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter your email">
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block text-text-secondary text-sm font-bold mb-2">Password</label>
+                    <input type="password" id="password" name="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-text-secondary mb-3 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter your password">
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                        Login
+                    </button>
+                    <a class="inline-block align-baseline font-bold text-sm text-primary hover:text-primary-dark" href="#">
+                        Forgot Password?
+                    </a>
+                </div>
+                <div class="text-center mt-4">
+                    <p class="text-text-secondary">Don't have an account? <a href="#" class="text-primary font-bold">Register here</a>.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
+                            <path d="M14 14l-2-2-1.41 1.41L14 16.83l6-6L18.59 9.42 14 14z" fill="white"/>
+                        </svg>
+                        <span class="text-xl font-bold">Scholarships</span>
+                    </div>
+                    <p class="text-secondary-200 mb-4">Every merit deserves opportunity. Transform your educational dreams into reality.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="scholarship_search_results.html" class="text-secondary-200 hover:text-white transition-smooth">Find Scholarships</a></li>
+                        <li><a href="student_dashboard.html" class="text-secondary-200 hover:text-white transition-smooth">Student Dashboard</a></li>
+                        <li><a href="college_partnership_hub.html" class="text-secondary-200 hover:text-white transition-smooth">College Partners</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-white transition-smooth">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-white transition-smooth">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-secondary-200 hover:text-white transition-smooth">WhatsApp Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-secondary-200">
+                        <p>📧 support@scholarships.in</p>
+                        <p>📱 +91 98765 43210</p>
+                        <p>🕒 Mon-Sat: 9 AM - 6 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-secondary-700 mt-8 pt-8 text-center text-secondary-200">
+                <p>&copy; 2025 Scholarships. All Rights Reserved. | Empowering students across India</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
