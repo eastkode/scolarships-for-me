@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Dashboard - ScholarPath</title>
+    <title>Student Dashboard - Scholarships</title>
     <link rel="stylesheet" href="../css/main.css" />
-    <meta name="description" content="Track your scholarship applications, manage deadlines, and discover personalized opportunities on your ScholarPath dashboard." />
+    <meta name="description" content="Track your scholarship applications, manage deadlines, and discover personalized opportunities on your Scholarships dashboard." />
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fscholarpat4968back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
 </head>
 <body class="bg-background">
@@ -19,7 +19,7 @@
                         <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
                         <path d="M14 14l-2-2-1.41 1.41L14 16.83l6-6L18.59 9.42 14 14z" fill="white"/>
                     </svg>
-                    <span class="text-xl font-bold text-secondary">ScholarPath</span>
+                    <span class="text-xl font-bold text-secondary">Scholarships</span>
                 </div>
 
                 <!-- Desktop Navigation -->
@@ -27,6 +27,8 @@
                     <a href="homepage.html" class="text-text-secondary hover:text-primary transition-smooth">Home</a>
                     <a href="scholarship_search_results.html" class="text-text-secondary hover:text-primary transition-smooth">Scholarships</a>
                     <a href="college_partnership_hub.html" class="text-text-secondary hover:text-primary transition-smooth">Colleges</a>
+                    <a href="student_login.html" class="text-text-secondary hover:text-primary transition-smooth">Student Login</a>
+                    <a href="college_login.html" class="text-text-secondary hover:text-primary transition-smooth">College Login</a>
                     <a href="student_dashboard.html" class="text-primary font-semibold">Dashboard</a>
                 </div>
 
@@ -120,95 +122,49 @@
                         <button class="btn-primary mt-4">Complete Profile</button>
                     </div>
 
-                    <!-- Active Applications -->
+                    <!-- Claimed Scholarships -->
                     <div class="card">
                         <div class="flex items-center justify-between mb-6">
-                            <h2 class="text-xl font-semibold text-secondary">Active Applications</h2>
+                            <h2 class="text-xl font-semibold text-secondary">Claimed Scholarships</h2>
                             <a href="scholarship_search_results.html" class="text-primary hover:text-primary-700 transition-smooth text-sm font-medium">View All</a>
                         </div>
                         
                         <div class="space-y-4">
-                            <!-- Application 1 -->
+                            <!-- Scholarship 1 -->
                             <div class="border border-secondary-200 rounded-lg p-4 hover:shadow-subtle transition-smooth">
                                 <div class="flex items-start justify-between mb-3">
                                     <div class="flex-1">
-                                        <h3 class="font-semibold text-secondary mb-1">Merit-Based Engineering Scholarship</h3>
-                                        <p class="text-sm text-text-secondary">IIT Delhi • ₹2,50,000</p>
+                                        <h3 class="font-semibold text-secondary mb-1">Tech Leaders Scholarship</h3>
+                                        <p class="text-sm text-text-secondary">Google • ₹5,00,000</p>
                                     </div>
-                                    <span class="bg-accent-100 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold">Under Review</span>
+                                    <span class="bg-success-100 text-success-600 px-3 py-1 rounded-full text-xs font-semibold">Claimed</span>
                                 </div>
                                 <div class="flex items-center justify-between text-sm">
                                     <div class="flex items-center text-text-secondary">
                                         <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a4 4 0 118 0v4m-4 8a2 2 0 100-4 2 2 0 000 4zm0 0v4a2 2 0 002 2h6a2 2 0 002-2v-4"/>
                                         </svg>
-                                        Applied: 15 Jan 2025
+                                        Claimed on: 1 Feb 2025
                                     </div>
-                                    <div class="flex items-center text-accent">
-                                        <svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                        </svg>
-                                        Result: 28 Feb 2025
-                                    </div>
-                                </div>
-                                <div class="mt-3 w-full bg-secondary-100 rounded-full h-2">
-                                    <div class="bg-accent h-2 rounded-full" style="width: 60%"></div>
                                 </div>
                             </div>
 
-                            <!-- Application 2 -->
+                            <!-- Scholarship 2 -->
                             <div class="border border-secondary-200 rounded-lg p-4 hover:shadow-subtle transition-smooth">
                                 <div class="flex items-start justify-between mb-3">
                                     <div class="flex-1">
-                                        <h3 class="font-semibold text-secondary mb-1">Women in Technology Scholarship</h3>
-                                        <p class="text-sm text-text-secondary">BITS Pilani • ₹1,50,000</p>
+                                        <h3 class="font-semibold text-secondary mb-1">Future of India Scholarship</h3>
+                                        <p class="text-sm text-text-secondary">Reliance Foundation • ₹4,00,000</p>
                                     </div>
-                                    <span class="bg-success-100 text-success-600 px-3 py-1 rounded-full text-xs font-semibold">Approved</span>
+                                    <span class="bg-success-100 text-success-600 px-3 py-1 rounded-full text-xs font-semibold">Claimed</span>
                                 </div>
                                 <div class="flex items-center justify-between text-sm">
                                     <div class="flex items-center text-text-secondary">
                                         <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a4 4 0 118 0v4m-4 8a2 2 0 100-4 2 2 0 000 4zm0 0v4a2 2 0 002 2h6a2 2 0 002-2v-4"/>
                                         </svg>
-                                        Applied: 10 Jan 2025
+                                        Claimed on: 15 Feb 2025
                                     </div>
-                                    <div class="flex items-center text-success">
-                                        <svg class="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                                        </svg>
-                                        Congratulations!
-                                    </div>
-                                </div>
-                                <div class="mt-3 w-full bg-secondary-100 rounded-full h-2">
-                                    <div class="bg-success h-2 rounded-full" style="width: 100%"></div>
-                                </div>
-                            </div>
-
-                            <!-- Application 3 -->
-                            <div class="border border-secondary-200 rounded-lg p-4 hover:shadow-subtle transition-smooth">
-                                <div class="flex items-start justify-between mb-3">
-                                    <div class="flex-1">
-                                        <h3 class="font-semibold text-secondary mb-1">Rural Excellence Scholarship</h3>
-                                        <p class="text-sm text-text-secondary">NIT Surat • ₹3,00,000</p>
-                                    </div>
-                                    <span class="bg-primary-100 text-primary px-3 py-1 rounded-full text-xs font-semibold">Submitted</span>
-                                </div>
-                                <div class="flex items-center justify-between text-sm">
-                                    <div class="flex items-center text-text-secondary">
-                                        <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a4 4 0 118 0v4m-4 8a2 2 0 100-4 2 2 0 000 4zm0 0v4a2 2 0 002 2h6a2 2 0 002-2v-4"/>
-                                        </svg>
-                                        Applied: 20 Jan 2025
-                                    </div>
-                                    <div class="flex items-center text-accent">
-                                        <svg class="h-4 w-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                        </svg>
-                                        Result: 15 Mar 2025
-                                    </div>
-                                </div>
-                                <div class="mt-3 w-full bg-secondary-100 rounded-full h-2">
-                                    <div class="bg-primary h-2 rounded-full" style="width: 25%"></div>
                                 </div>
                             </div>
                         </div>
@@ -514,7 +470,7 @@
                             <path d="M16 2L3 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-13-5z"/>
                             <path d="M14 14l-2-2-1.41 1.41L14 16.83l6-6L18.59 9.42 14 14z" fill="white"/>
                         </svg>
-                        <span class="text-xl font-bold">ScholarPath</span>
+                        <span class="text-xl font-bold">Scholarships</span>
                     </div>
                     <p class="text-secondary-200 mb-4">Every merit deserves opportunity. Transform your educational dreams into reality.</p>
                 </div>
@@ -551,7 +507,7 @@
             </div>
 
             <div class="border-t border-secondary-700 mt-8 pt-8 text-center text-secondary-200">
-                <p>&copy; 2025 ScholarPath. All Rights Reserved. | Empowering students across India</p>
+                <p>&copy; 2025 Scholarships. All Rights Reserved. | Empowering students across India</p>
             </div>
         </div>
     </footer>
